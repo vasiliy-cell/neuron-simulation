@@ -1,9 +1,11 @@
-import numpy as np
+import random
 import matplotlib.pyplot as plt
 
+# simulation parameters
 T = 200                 # total time steps
 dt = 1.0                # time step size
 
+# neuron parameters
 V = 0.0                 # current membrane potential
 V_history = []          # store V over time
 spikes = []             # spike history (0 or 1)
@@ -12,12 +14,14 @@ V_threshold = 1.0       # spike threshold
 V_reset = 0.0           # reset potential after spike
 tau = 20.0              # leak time constant (controls decay speed)
 
+# input parameters
 p = 0.2                 # probability of input impulse at each step
 input_strength = 0.5    # how much each impulse increases V
 
+# simulation loop
 for t in range(T):
     # generate random input (Bernoulli process)
-    if np.random.rand() < p:
+    if random.random() < p:
         I = input_strength
     else:
         I = 0.0
