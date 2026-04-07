@@ -22,4 +22,4 @@ Run the Python script. Adjust parameters like `p`, `V_threshold`, `V_reset`, and
 
 
 
-![alt text](<Screenshot from 2026-04-07 14-35-12.png>)
+![alt text](<./pictures for readme/screen.png>)
